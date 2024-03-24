@@ -1,0 +1,1 @@
+{"name":"Local: Final_Sale","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\Final_Sale.cpp","tests":[{"id":1710947365141,"input":"2\n2\n1 2\n3\n7 1 2","output":"5\n14"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\Final_Sale.cpp","group":"local","local":true}
