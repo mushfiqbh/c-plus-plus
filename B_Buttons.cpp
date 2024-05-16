@@ -1,6 +1,5 @@
 // Problem Solver: Mushfiq R.
 #include <iostream>
-#include <string>
 using namespace std;
 
 int main()
@@ -8,11 +7,9 @@ int main()
 	ios_base::sync_with_stdio(false);
 	cin.tie(NULL);
 	cout.tie(NULL);
-	int n;
-	cin >> n;
-	
-	string o(n, 'o');
-	cout << 'L' << o << "ng";
+	unsigned long long n;
+    cin >> n;
+    cout << (n-1) * n * (n+1) / 6 + n;
 
 	return 0;
 }
