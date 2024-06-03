@@ -1,23 +1,21 @@
-/**
- * L - Printing Tokens
- * Mushfiq (295)
-*/
 #include <stdio.h>
-#include <string.h>
+
+int rec(int a)
+{
+    if (a % 2 == 0 && a < 1)
+    {
+        return 2;
+    }
+
+    int b = a + 1;
+    int ans = rec(a - 3) + b;
+    return ans;
+}
 
 int main()
 {
-    char txt[1000];
-    scanf("%[^\n]", txt);
-
-    for (int i = 0; i < strlen(txt); i++){
-        if (txt[i] == ' '){
-            printf("%c", '\n');
-        }
-        else{
-            printf("%c", txt[i]);
-        }
-    }
+    int ans = rec(9);
+    printf("%d", ans);
 
     return 0;
 }
