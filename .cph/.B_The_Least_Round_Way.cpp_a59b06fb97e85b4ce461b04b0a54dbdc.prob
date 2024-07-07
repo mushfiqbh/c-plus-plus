@@ -1,0 +1,1 @@
+{"name":"Local: B_The_Least_Round_Way","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_The_Least_Round_Way.cpp","tests":[{"id":1718033254428,"input":"3\n1 2 3\n4 5 6\n7 8 9","output":"0\nDDRR"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_The_Least_Round_Way.cpp","group":"local","local":true}

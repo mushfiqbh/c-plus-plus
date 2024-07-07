@@ -1,29 +1,31 @@
+// Mushfiqbh
 #include <iostream>
 #include <string>
+#include <vector>
 using namespace std;
 
 int main()
 {
-	ios_base::sync_with_stdio(false);
-	cin.tie(NULL); cout.tie(NULL);
-    int zero=0, one=0, maxx=0;
-	string s;
-    cin >> s;
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
 
-    for(char c : s){
-        if(c == '0'){
-            zero++;
-            maxx = max(maxx, one);
-            one = 0;
-        }else{
-            one++;
-            maxx = max(maxx, zero);
-            zero = 0;
-        }
+    int n, c = 1;
+    cin >> n;
+    vector<string> a(n + 1);
+    a[n] = "NO";
+    cin >> a[0];
+    for (int i = 1; i < n; i++)
+    {
+        cin >> a[i];
+        if (a[i] == a[0])
+            c++;
+        else
+            a[n] = a[i];
     }
-    maxx = max(maxx, max(one, zero));
+    if (c > n - c)
+        cout << a[0];
+    else
+        cout << a[n];
 
-    cout << (maxx >= 7 ? "YES" : "NO");
-	
-	return 0;
+    return 0;
 }
