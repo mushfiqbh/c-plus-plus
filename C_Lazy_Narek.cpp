@@ -7,17 +7,6 @@ using namespace std;
 #define ll long long
 #define ld long double
 #define vsort(v) sort(v.begin(), v.end())
-#define NIL -1
-#define MAX 1000
-
-int lookup[MAX];
-void lookup_init()
-{
-    for (int i = 0; i < MAX; i++)
-    {
-        lookup[i] = NIL;
-    }
-}
 
 int main()
 {
@@ -28,7 +17,20 @@ int main()
     cin >> t;
     while (t--)
     {
-        
+        int n, m;
+        cin >> n >> m;
+        string txt = "";
+        for(int i = 0; i < n; i++){
+            string s;
+            cin >> s;
+            txt += s;
+        }
+
+        int narek = 0, chatgpt = 0;
+
+        for(char ch : txt) {
+            
+        }
     }
 
     return 0;

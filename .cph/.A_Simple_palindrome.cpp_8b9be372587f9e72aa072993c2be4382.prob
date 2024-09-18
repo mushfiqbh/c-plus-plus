@@ -1,0 +1,1 @@
+{"name":"Local: A_Simple_palindrome","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_Simple_palindrome.cpp","tests":[{"id":1726326935167,"input":"3\n2\n3\n6","output":"uo\niae\noeiiua"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_Simple_palindrome.cpp","group":"local","local":true}

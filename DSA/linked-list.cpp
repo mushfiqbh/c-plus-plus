@@ -17,7 +17,7 @@ struct Node
         data = d;
         next = NULL;
     }
-}
+};
 
 struct SLL
 {
@@ -81,8 +81,7 @@ void SLL::insertAtPos(int d, int pos)
     {
         head = newNode;
     }
-    else
-    {
+    else    {
         Node *current = head;
         int count = 0;
 
