@@ -12,6 +12,7 @@ struct StdInfo
 };
 
 bool comp(StdInfo a, StdInfo b)
+
 {
     return a.cgpa < b.cgpa;
 }
