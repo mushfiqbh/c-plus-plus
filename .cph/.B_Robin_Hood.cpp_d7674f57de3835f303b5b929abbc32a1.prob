@@ -1,0 +1,1 @@
+{"name":"Local: B_Robin_Hood","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_Robin_Hood.cpp","tests":[{"id":1726931526236,"input":"5\n1 1\n2 1\n2 2\n3 2\n4 4","output":"NO\nYES\nNO\nNO\nYES"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_Robin_Hood.cpp","group":"local","local":true}

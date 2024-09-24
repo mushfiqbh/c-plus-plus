@@ -64,18 +64,18 @@ bool isIdentity(int (*arr)[3], int row)
     return true;
 }
 
-// void transposer(int arr[][3], int row)
-// {
-//     int tArr[3][row];
-//     for (int i = 0; i < row; i++)
-//     {
-//         for (int j = 0; j < 3; j++)
-//         {
-//             tArr[i][j] = arr[j][i];
-//         }
-//     }
-//     print_array(tArr, row);
-// }
+void transposer(int arr[][3], int row)
+{
+    int tArr[3][row];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            tArr[i][j] = arr[j][i];
+        }
+    }
+    print_array(tArr, row);
+}
 
 int main()
 {

@@ -212,9 +212,6 @@ int main()
     li.print();
     li.deleteTail();
     li.print();
-    li.deleteAtPos(2);
-    li.print();
-    li.searchItem(20);
 
     return 0;
 }
