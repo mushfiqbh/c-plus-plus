@@ -34,9 +34,7 @@ struct SLL
 
 void SLL::insertHead(int d)
 {
-    Node *newNode = new Node();
-    newNode->data = d;
-    newNode->next = NULL;
+    Node *newNode = new Node(d);
 
     if (head == NULL)
     {

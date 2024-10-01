@@ -1,0 +1,1 @@
+{"name":"Local: B_Brightness_Begins","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_Brightness_Begins.cpp","tests":[{"id":1727627606806,"input":"3\n1\n3\n8","output":"2\n5\n11"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_Brightness_Begins.cpp","group":"local","local":true}
