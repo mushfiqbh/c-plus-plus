@@ -57,10 +57,47 @@ int main()
                 break; // main loop break
         }
     }
+
     if (flag)
         cout << "Identt" << endl;
     else
         cout << "Not Identt" << endl;
+}
+
+void transposer(int arr[][3], int row)
+{
+    int tArr[3][row];
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            tArr[i][j] = arr[j][i];
+        }
+    }
+    print_array(tArr, row);
 
     return 0;
+}
+
+void input_array(int (*arr)[3], int row)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cin >> arr[i][j];
+        }
+    }
+}
+
+void print_array(int (*arr)[3], int row)
+{
+    for (int i = 0; i < row; i++)
+    {
+        for (int j = 0; j < 3; j++)
+        {
+            cout << arr[i][j] << " ";
+        }
+        cout << endl;
+    }
 }
