@@ -4,21 +4,27 @@ using namespace std;
 int main()
 {
     // Sorting array of integers and counting steps
-    int arr[] = {23, 12, 23, 93, 12, 45, 47, 65};
+    int arr[] = {7, 47, 27, 53, 38, 33};
     int sz = sizeof(arr) / sizeof(int);
 
     int pass = 0, steps = 0;
     for (int i = 0; i < sz - 1; i++)
     {
+        pass++;
+        bool swapped = false;
         for (int j = 0; j < sz - i - 1; j++)
         {
+            steps++;
             if (arr[j] > arr[j + 1])
             {
                 swap(arr[j], arr[j + 1]);
-                steps++;
+                swapped = true;
             }
         }
-        pass++;
+        if (!swapped)
+        {
+            break;
+        }
     }
     for (int i = 0; i < sz; i++)
     {
