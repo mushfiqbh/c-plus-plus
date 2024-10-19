@@ -1,0 +1,1 @@
+{"name":"Local: BigIntegerMultiplication","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\DSA\\BigIntegerMultiplication.cpp","tests":[{"id":1729330388494,"input":"354\n378","output":"88452"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\DSA\\BigIntegerMultiplication.cpp","group":"local","local":true}

@@ -1,0 +1,1 @@
+{"name":"Local: B_LCM_String","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_LCM_String.cpp","tests":[{"id":1729258213896,"input":"3\nbaba\nba\naa\naaa\naba\nab","output":"baba\naaaaaa\n-1"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\B_LCM_String.cpp","group":"local","local":true}

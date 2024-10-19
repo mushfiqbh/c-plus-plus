@@ -1,0 +1,1 @@
+{"name":"Local: A_Minimize","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_Minimize.cpp","tests":[{"id":1729259170361,"input":"3\n1 2\n3 10\n5 5","output":"1\n7\n0"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_Minimize.cpp","group":"local","local":true}

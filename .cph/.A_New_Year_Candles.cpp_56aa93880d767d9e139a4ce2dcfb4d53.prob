@@ -1,0 +1,1 @@
+{"name":"Local: A_New_Year_Candles","url":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_New_Year_Candles.cpp","tests":[{"id":1728834221112,"input":"2\n4 2\n6 3","output":"7\n8"}],"interactive":false,"memoryLimit":1024,"timeLimit":3000,"srcPath":"c:\\Users\\HP\\OneDrive\\Documents\\C-Plus-Plus\\A_New_Year_Candles.cpp","group":"local","local":true}
