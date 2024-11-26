@@ -5,13 +5,7 @@ struct Node
 {
     int data;
     Node *next;
-
-    Node()
-    {
-        data = 0;
-        next = NULL;
-    }
-
+    
     Node(int value)
     {
         data = value;
@@ -26,7 +20,7 @@ struct SLL
     void insertEnd(int value);
     void insertAtPos(int value, int pos);
     void deleteHead();
-    void deleteTail();
+    void deleteEnd();
     void deleteAtPos(int pos);
     void searchItem(int item);
     void print();
@@ -133,7 +127,7 @@ void SLL::deleteHead()
     }
 }
 
-void SLL::deleteTail()
+void SLL::deleteEnd()
 {
     if (head == NULL)
     {

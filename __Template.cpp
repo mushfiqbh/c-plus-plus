@@ -10,6 +10,11 @@ using namespace std;
 #define NIL -1
 #define MAX 1000
 
+#include <iostream>
+#include <vector>
+using namespace std;
+
+
 int lookup[MAX];
 void lookup_init()
 {
