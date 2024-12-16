@@ -3,59 +3,66 @@
 #include <algorithm>
 using namespace std;
 
-bool isOperator(char ch) {
-    return ch=='+' || ch=='-' || ch=='*' || ch=='/' || ch=='^';
+bool isOperator(char ch)
+{
+    return ch == '+' || ch == '-' || ch == '*' || ch == '/' || ch == '^';
 }
 
-int precedence(char ch) {
-    if(ch=='+' || ch=='-') {
+int precedence(char ch)
+{
+    if (ch == '+' || ch == '-')
+    {
         return 1;
     }
-    else if(ch=='*' || ch=='/') {
+    else if (ch == '*' || ch == '/')
+    {
         return 2;
     }
-    else if(ch=='^') {
+    else if (ch == '^')
+    {
         return 3;
     }
-    else if(ch==')' || ch=='}' || ch==']') {
+    else if (ch == ')' || ch == '}' || ch == ']')
+    {
         return 4;
     }
 }
 
-int main() {
+int main()
+{
     stack<char> st;
-    string exp, prefixResult="";
+    string exp, prefixResult = "";
     cin >> exp;
 
     // Step 1
     reverse(exp.begin(), exp.end());
 
     // Step 2
-    for(int i=0; i<exp.size(); i++) {
+    for (int i = 0; i < exp.size(); i++)
+    {
         // Step 3
-        if(exp[i]>='A' && exp[i]<='Z') {
+        if (exp[i] >= 'A' && exp[i] <= 'Z')
+        {
             prefixResult += exp[i];
         }
-        else if(isOperator(exp[i])) {
-            // Step 4
-            if(st.empty()) {
+        else if (isOperator(exp[i]))
+        {
+            // Step 4 + 5
+            if (st.empty() || st.top() == ')' || precedence(exp[i]) >= precedence(st.top()))
+            {
                 st.push(exp[i]);
             }
             // Step 6
-            else if(exp[i]=='^' && st.top()=='^') {
+            else if (exp[i] == '^' && st.top() == '^')
+            {
                 prefixResult += st.top();
                 st.pop();
                 st.push(exp[i]);
             }
-            else if(st.top()==')') {
-                st.push(exp[i]);
-            }
-            // Step 5
-            else if(precedence(exp[i]) >= precedence(st.top())) {
-                st.push(exp[i]);
-            }
-            else {
-                while(!st.empty() && (precedence(exp[i]) < precedence(st.top()))) {
+            else
+            {
+                while (!st.empty() && (precedence(exp[i]) < precedence(st.top())))
+                {
                     prefixResult += st.top();
                     st.pop();
                 }
@@ -63,11 +70,14 @@ int main() {
             }
         }
         // Step 7
-        else if(exp[i]==')') {
+        else if (exp[i] == ')')
+        {
             st.push(exp[i]);
         }
-        else if(exp[i]=='(') {
-            while(st.top()!=')') {
+        else if (exp[i] == '(')
+        {
+            while (st.top() != ')')
+            {
                 prefixResult += st.top();
                 st.pop();
             }
@@ -76,7 +86,8 @@ int main() {
     }
 
     // Step 8
-    while(!st.empty()) {
+    while (!st.empty())
+    {
         prefixResult += st.top();
         st.pop();
     }
@@ -90,5 +101,3 @@ int main() {
 }
 
 // Testcase: K+L-M*N+(O^P)*W/U/V*T+Q
-
-

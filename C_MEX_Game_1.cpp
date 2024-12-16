@@ -1,49 +1,59 @@
-#include <iostream>
-#include <vector>
+// Author: Mushfiq R.
+#include <bits/stdc++.h>
+#define ll long long
+#define ld long double
+#define ull unsigned long long
+#define vsort(v) sort(v.begin(), v.end())
+#define rsort(v) sort(v.begin(), v.end(), greater<int>())
+#define fastIO() (ios_base::sync_with_stdio(false), cin.tie(NULL));
 using namespace std;
 
 int main()
 {
-    long long t;
+    fastIO();
+    int t;
     cin >> t;
     while (t--)
     {
-        long long n;
+        ll n;
         cin >> n;
-        long long arr[n];
-        for (long long i = 0; i < n; i++)
+        ll arr[n], arr2[n + 1] = {0};
+
+        for (ll i = 0; i < n; i++)
         {
             cin >> arr[i];
         }
 
-        vector<long long> vct(n + 1, 0);
-        for (long long i = 0; i < n; i++)
+        for (ll i = 0; i < n; i++)
         {
-            vct[arr[i]]++;
+            arr2[arr[i]]++;
         }
-        
-        long long res = 0;
-        bool toggle = true;
-        for (long long i = 0; i <= n; i++)
+
+        bool cng = 1;
+        ll ans = 0;
+
+        for (ll i = 0; i <= n; i++)
         {
-            if (vct[i] == 0)
+            if (arr2[i] == 0)
             {
-                res = i;
+                ans = i;
                 break;
             }
-            else if (vct[i] == 1)
+            else if (arr2[i] == 1)
             {
-                if (toggle)
+                if (cng)
                 {
-                    toggle = false;
+                    cng = 0;
                 }
                 else
                 {
-                    res = i;
+                    ans = i;
                     break;
                 }
             }
         }
-        cout << res << endl;
+        cout << ans << endl;
     }
+
+    return 0;
 }

@@ -1,10 +1,21 @@
-#include <bits/stdc++.h>
+// Stack Linked List
+#include<bits/stdc++.h>
 using namespace std;
-const int MX = 10;
+const int MX = 5;
+
+struct Node{
+    int data;
+    Node *next;
+    Node(int d)
+    {
+        data = d;
+        next = NULL;
+    }
+};
 
 struct Stack
 {
-    int arr[MX];
+    Node *head = NULL;
     int cnt = 0;
 
     int Size();
@@ -18,6 +29,7 @@ int Stack::Size()
 {
     return cnt;
 }
+
 bool Stack::Empty()
 {
     return Size() == 0;
@@ -25,37 +37,50 @@ bool Stack::Empty()
 
 void Stack::push(int d)
 {
-    if (cnt < MX)
+    Node *n = new Node(d);
+    if(cnt<MX)
     {
-        arr[cnt++] = d;
+        if(head == NULL)
+        {
+            head = n;
+        }
+        else{
+            n->next = head;
+            head = n;
+        }
+        cnt++;
     }
-    else
-    {
-        cout << "Stack Overflow..." << endl;
+    else{
+        cout<<"Stack is full already. Overflow..."<<endl;
     }
 }
 
 int Stack::pop()
 {
-    if (Size() == 0)
+    if(Size()==0)
     {
-        cout << "Stack Underflow..." << endl;
+        cout<<"Stack is already Empty. Underflow..."<<endl;
         return -1;
     }
-    else
-    {
-        return arr[--cnt];
+    else{
+        Node *h = head;
+        head = head->next;
+        int deletedData = h->data;
+
+        delete h;
+        cnt--;
+        return deletedData;
     }
 }
 
 int Stack::top()
 {
-    if (Size() == 0)
+    if(head==NULL)
     {
-        cout << "Stack is Empty" << endl;
+        cout<<"Stack is Empty"<<endl;
         return -1;
     }
-    return arr[cnt - 1];
+    return head->data;
 }
 
 int main()
@@ -68,18 +93,11 @@ int main()
     st.push(50);
     st.push(50);
 
-    cout << "TOP is " << st.top() << endl;
-    cout << "Deleted " << st.pop() << endl;
-    cout << "TOP is " << st.top() << endl;
-    cout << "Size " << st.Size() << endl;
-    if (st.Empty())
-    {
-        cout << "Stack is Empty" << endl;
-    }
-    else
-    {
-        cout << "Stack is not Empty" << endl;
-    }
+    cout<<"TOP is "<<st.top()<<endl;
+    cout<<"Deleted "<<st.pop()<<endl;
+    cout<<"TOP is "<<st.top()<<endl;
+    cout<<"Size "<<st.Size()<<endl;
+    cout<<st.Empty()<<endl;
 
     return 0;
 }

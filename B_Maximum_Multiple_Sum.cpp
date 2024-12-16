@@ -1,27 +1,27 @@
-#include <iostream>
+// Time Complexity : O(n)
+#include <bits/stdc++.h>
 using namespace std;
 
-int sum_multiples_of(int x, int n) {
-    int m = n / x;
-    return x * m * (m + 1) / 2;
-}
-
-int main() {
+int main()
+{
     int t;
     cin >> t;
-
-    while (t--) {
+    while (t--)
+    {
         int n;
         cin >> n;
 
         int optimal = 2;
-        int optimal_sum = sum_multiples_of(2, n);
+        int summ = (n / 2) * (n / 2 + 1);
 
-        for (int x = 3; x <= n; x++) {
-            int sum_multiples = sum_multiples_of(x, n);
-            if (sum_multiples > optimal_sum) {
+        for (int x = 3; x <= n; x++)
+        {
+            int maxx = x * (n / x) * (n / x + 1) / 2;
+
+            if (maxx > summ)
+            {
+                summ = maxx;
                 optimal = x;
-                optimal_sum = sum_multiples;
             }
         }
 

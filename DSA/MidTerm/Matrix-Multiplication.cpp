@@ -16,7 +16,7 @@ int main()
 
     int mat1[row1][col1];
     int mat2[row2][col2];
-    int result[row1][col2];
+    int result[row1][col2]; // (M x N) * (N x P) = (M x P)
 
     cout << "Enter elements of the first Matrix:" << endl;
     for (int i = 0; i < row1; i++) {
